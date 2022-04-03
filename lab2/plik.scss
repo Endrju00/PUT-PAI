@@ -1,0 +1,154 @@
+$fontSize : 16px;
+$titleSize: 2;
+$backgroundColor: lightgray;
+$fontColor: black;
+$logoSize: 75px;
+$marginSize: 15px;
+
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: $fontSize;
+    text-decoration: none;
+    font-weight: normal;
+    color: $fontColor;
+}
+
+html,
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div>header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    margin-left: $marginSize;
+    font-size: 2*$fontSize;
+    font-weight: bold;
+    flex-grow: $titleSize;
+}
+
+nav {
+    display: flex;
+    flex-grow: 2*$titleSize;
+    justify-content: right;
+    align-self: flex-start;
+}
+
+nav>a {
+    margin-top: 10px;
+    width: 75px;
+}
+
+.logo {
+    margin: 10px;
+    width: $logoSize;
+    height: $logoSize;
+    line-height: $logoSize;
+    border-radius: 100%;
+    border: 3px solid black;
+    font-size: 2*$fontSize;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    background: $backgroundColor;
+}
+
+article {
+    margin: $marginSize;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+article>header {
+    height: 50px;
+    width: 50%;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $backgroundColor;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+article>p {
+    text-align: justify;
+    padding: 15px;
+}
+
+footer {
+    height: 100px;
+    background-color: $backgroundColor;
+    border-top: 2px solid black;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+p+p{
+    font-weight: bold;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+
+@media all and (max-width: 900px) {
+    main {
+        flex-wrap: wrap;
+    }
+
+    h1, nav {
+        display: none;
+    } 
+
+    .hamburger {
+        display: flex;
+        flex-grow: 2*$titleSize;
+        justify-content: right;
+        align-self: flex-start;
+        margin-top: $marginSize;
+        width: 50px;
+    }
+}
