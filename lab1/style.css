@@ -1,0 +1,47 @@
+li {
+    list-style-type: square
+}
+
+#cena {
+    color: red;
+    font-weight: bold;
+}
+
+.wstep {
+    font-style: italic;
+}
+
+td>img {
+    border-style: solid;
+    border-color: blue;
+}
+
+td>img:hover {
+    border-style: solid;
+    border-color: red;
+}
+
+h1~h2 {
+    letter-spacing: 5px;
+}
+
+td[colspan="2"] p {
+    font-size: small;
+}
+
+p~p {
+    color: gray;
+}
+
+body {
+    background-image: url("https://ecsmedia.pl/c/listy-od-astrofizyka-w-iext66451591.jpg");
+    background-repeat: repeat-y;
+}
+
+h1 {
+    color: blue
+}
+
+h1 {
+    color: green
+}
