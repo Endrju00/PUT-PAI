@@ -1,0 +1,40 @@
+2022-04-18 18:27:45 Error: [MissingControllerException] Controller class EmployeeController could not be found.
+Exception Attributes: array (
+  'class' => 'EmployeeController',
+  'plugin' => NULL,
+)
+Request URL: /cake/employee
+Stack Trace:
+#0 C:\mainC\xampp\htdocs\cake\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-04-18 18:32:05 Error: [MissingControllerException] Controller class EmployeeController could not be found.
+Exception Attributes: array (
+  'class' => 'EmployeeController',
+  'plugin' => NULL,
+)
+Request URL: /cake/employee
+Stack Trace:
+#0 C:\mainC\xampp\htdocs\cake\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-05-01 21:24:08 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Nie można nawiązać połączenia, ponieważ komputer docelowy aktywnie go odmawia',
+  'enabled' => true,
+)
+Request URL: /cake/
+Stack Trace:
+#0 C:\mainC\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\mainC\xampp\htdocs\cake\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\mainC\xampp\htdocs\cake\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\mainC\xampp\htdocs\cake\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\mainC\xampp\htdocs\cake\lib\Cake\Model\Model.php(3686): Model->setSource('books')
+#5 C:\mainC\xampp\htdocs\cake\lib\Cake\Model\Model.php(3053): Model->getDataSource()
+#6 C:\mainC\xampp\htdocs\cake\lib\Cake\Model\Model.php(3025): Model->_readDataSource('all', Array)
+#7 C:\mainC\xampp\htdocs\cake\app\Controller\BooksController.php(10): Model->find('all')
+#8 [internal function]: BooksController->index()
+#9 C:\mainC\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(BooksController), Array)
+#10 C:\mainC\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\mainC\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BooksController), Object(CakeRequest))
+#12 C:\mainC\xampp\htdocs\cake\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
