@@ -5,11 +5,14 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
 
     const submitTodoHandler = (event) => {
         event.preventDefault();
-        setTodos([
-            ...todos,
-            { text: inputText, completed: false, id: Math.random() * 1000 }
-        ]);
-        setInputText("");
+        if (inputText !== "") {
+            setTodos([
+                ...todos,
+                { text: inputText, completed: false, id: Math.random() * 1000 }
+            ]);
+            setInputText("");
+        }
+        document.getElementById("taskInput").focus()
     }
 
     const statusHandler = (event) => {
@@ -18,7 +21,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
 
     return (
         <form>
-            <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
+            <input id="taskInput" autoFocus value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i>
             </button>
